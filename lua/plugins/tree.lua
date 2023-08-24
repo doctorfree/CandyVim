@@ -1,4 +1,3 @@
-local utils = require("utils")
 local api = require("nvim-tree.api")
 
 local git_icons = {
@@ -152,11 +151,11 @@ require("nvim-tree").setup({
 		hide_root_folder = false,
 		-- side of the tree, can be one of 'left' | 'right' | 'top' | 'bottom'
 		side = "left",
-		mappings = {
+		-- mappings = {
 			-- custom only false will merge the list with the default mappings
 			-- if true, it will only use your list to set the mappings
-			custom_only = true,
-		},
+		-- 	custom_only = true,
+		-- },
 		number = false,
 		relativenumber = false,
 	},
