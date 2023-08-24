@@ -71,7 +71,13 @@ Git Side Blame
 
 **Just clone GitHub repo into ~/.config/nvim.**
 
-After install configuration:
+**Prerequisities**
+
+- Make sure you have installed the latest version of Neovim v0.9.0+ (nightly is preferred).
+- Have wget, curl, unzip, git, make, pip, python, npm, node, luarocks, fd, ripgrep and cargo installed on your system. You can check if you are missing anything with `:checkhealth` command.
+- Have any nerd font installed. *Fira Code* has been used in screenshots. You can download it from [nerdfonts.com](https://www.nerdfonts.com/font-downloads).
+
+**After install configuration:**
 
 1. Selected treesitter Languages are installed by default.
 To check it run `:TSInstallInfo`.
@@ -80,7 +86,7 @@ Make sure to run `:TSInstall <lang>` for specific language you want to install.
 
 ## Configuration
 
-To change EcoVim related config use the `config/EcoVim.lua` file.\
+To change EcoVim related config use the `config/EcoVim.lua` file.
 
 To change vim settings use the `config/options.lua` file.
 
@@ -229,6 +235,9 @@ Space (SPC) is my Leader key.
 | <C - n>      | Finds next occurrence (like *) of word and puts multi-cursor there. Then you can go to Insert mode, Append, Change or Delete. [Read more](https://github.com/mg979/vim-visual-multi/wiki) |
 | <C - o>      | Jumps to previous cursor in jumplist. I use it very often.                                                                                                                                |
 | v <ENTER>    | Smartly selects next subjects of current treesitter context                                                                                                                               |
+| s            | Standalone jump to any word with `folke/flash.nvim`                                                                                                                                       |
+| ciq          | Change inside ANY quotes (`` or '' or "" etc.) with `mini.ai`                                                                                                                             |
+| cib          | Change inside ANY brackets ({} or [] or () etc.) with `mini.ai`                                                                                                                           |
 | za           | Toggle folds. By LSP and nvim-ufo they are automatically added to supported files in smart way.                                                                                           |
 | zM           | Close all folds                                                                                                                                                                           |
 | zR           | Open all folds                                                                                                                                                                            |

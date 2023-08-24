@@ -41,8 +41,8 @@ local codes = {
     "trailing-space",
   },
   unused_variable = {
-    message = "  Don't define variables you don't use",
-    icon = "  ",
+    message = "󰂭  Don't define variables you don't use",
+    icon = "󰂭  ",
     "unused-local",
     "@typescript-eslint/no-unused-vars",
     "no-unused-vars"
@@ -83,7 +83,7 @@ vim.diagnostic.config({
   float = {
     source = false,
     format = function(diagnostic)
-      local code = diagnostic.user_data.lsp.code
+      local code = diagnostic and diagnostic.user_data and diagnostic.user_data.lsp.code
 
       if not diagnostic.source or not code then
         return string.format('%s', diagnostic.message)
@@ -119,11 +119,16 @@ vim.diagnostic.config({
 
 -- UI
 
-local signs = { Error = " ", Warn = " ", Hint = " ", Info = " " }
+local signs = { Error = " ", Warn = " ", Hint = " ", Info = " " }
 
 for type, icon in pairs(signs) do
   local hl = "DiagnosticSign" .. type
   vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = "" })
 end
 
-require('lspconfig.ui.windows').default_options.border = EcoVim.ui.float.border or 'rounded'
+local lspui_ok, lspui = pcall(require, 'lspconfig.ui.windows')
+if not lspui_ok then
+  return
+end
+
+lspui.default_options.border = EcoVim.ui.float.border or 'rounded'

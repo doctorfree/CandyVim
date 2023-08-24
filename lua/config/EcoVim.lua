@@ -18,10 +18,10 @@ EcoVim = {
 	plugins = {
 		ai = {
 			chatgpt = {
-				enabled = false,
+				enabled = true,
 			},
 			codeium = {
-				enabled = true,
+				enabled = false,
 			},
 			copilot = {
 				enabled = true,
@@ -48,7 +48,9 @@ EcoVim = {
 		},
 		-- <leader>z
 		zen = {
-			kitty_enabled = true,
+			alacritty_enabled = false,
+			kitty_enabled = false,
+			wezterm_enabled = true,
 			enabled = true, -- sync after change
 		},
 	},

@@ -1,3 +1,7 @@
+-- WARN: DEPRECATED
+-- This file is not used anymore
+-- It is kept here for reference for now
+
 require("mason-null-ls").setup({
   ensure_installed = {
     -- Opt to list sources here, when available in mason.
@@ -12,6 +16,5 @@ require("null-ls").setup({
     require("null-ls").builtins.diagnostics.codespell.with({
       filetypes = { "markdown", "text" },
     }),
-    require("typescript.extensions.null-ls.code-actions"),
   },
 })
