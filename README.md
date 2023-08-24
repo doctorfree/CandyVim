@@ -72,7 +72,7 @@ Git Side Blame
 
 ## Installation
 
-**Just clone GitHub repo into ~/.config/nvim.**
+**Just clone GitHub repo into ~/.config/nvim-CandyVim**
 
 **Prerequisities**
 

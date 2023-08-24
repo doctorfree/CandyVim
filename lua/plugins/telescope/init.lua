@@ -116,7 +116,7 @@ M.edit_neovim = function()
   builtin.git_files(
     require('telescope.themes').get_dropdown({
       color_devicons   = true,
-      cwd              = "~/.config/nvim",
+      cwd              = "~/.config/nvim-CandyVim",
       previewer        = false,
       prompt_title     = "Candyvim Dotfiles",
       sorting_strategy = "ascending",
