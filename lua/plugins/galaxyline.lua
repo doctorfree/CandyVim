@@ -64,7 +64,7 @@ gl.short_line_list = { 'NvimTree', 'vista', 'dbui', 'packer', 'tagbar' }
 local gls = gl.section
 
 local bgcolor = function()
-  if EcoVim.colorscheme == 'nightfly' then
+  if CandyVim.colorscheme == 'nightfly' then
     return '#011627'
   else
     return nil;
@@ -358,7 +358,7 @@ table.insert(gls.left, {
 table.insert(gls.left, {
   DiagnosticError = {
     provider = 'DiagnosticError',
-    icon = EcoVim.icons.errorOutline,
+    icon = CandyVim.icons.errorOutline,
     separator_highlight = { colors.gitbg, colors.bg },
     highlight = { colors.diagerror, colors.lspbg }
   }
@@ -373,14 +373,14 @@ table.insert(gls.left, {
 table.insert(gls.left, {
   DiagnosticHint = {
     provider = 'DiagnosticHint',
-    icon = EcoVim.icons.lightbulbOutline,
+    icon = CandyVim.icons.lightbulbOutline,
     highlight = { colors.diaghint, colors.lspbg }
   }
 })
 table.insert(gls.left, {
   DiagnosticInfo = {
     provider = 'DiagnosticInfo',
-    icon = EcoVim.icons.infoOutline,
+    icon = CandyVim.icons.infoOutline,
     highlight = { colors.diaginfo, colors.lspbg }
   }
 })
@@ -446,7 +446,7 @@ table.insert(gls.right, {
   }
 })
 
-if EcoVim.statusline.path_enabled then
+if CandyVim.statusline.path_enabled then
   table.insert(gls.right, {
     FileName = {
       provider = function()
@@ -454,7 +454,7 @@ if EcoVim.statusline.path_enabled then
           return ''
         end
 
-        if EcoVim.statusline.path == 'relative' then
+        if CandyVim.statusline.path == 'relative' then
           local fname = vim.fn.expand('%:p')
           return fname:gsub(vim.fn.getcwd() .. '/', '') .. ' '
         end

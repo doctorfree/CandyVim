@@ -13,7 +13,7 @@ M.first_ecovim_run = function()
 
   if is_first_run then
     async.run(function()
-      require('notify')("Welcome to Ecovim! Hope you'll have a nice experience!", "info", { title = "Ecovim", timeout = 5000 })
+      require('notify')("Welcome to CandyVim! Hope you'll have a nice experience!", "info", { title = "CandyVim", timeout = 5000 })
       require('notify')("Please install treesitter servers manually by :TSInstall command.", "info", { title = "Installation", timeout = 10000 })
     end)
     local suc = os.remove('/tmp/first-ecovim-run')
@@ -31,7 +31,7 @@ end
 local _default_opts = win.default_opts
 win.default_opts = function(options)
   local opts = _default_opts(options)
-  opts.border = EcoVim.ui.float.border
+  opts.border = CandyVim.ui.float.border
   return opts
 end
 

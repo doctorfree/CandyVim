@@ -29,7 +29,7 @@ require("lazy").setup("config.plugins", {
   },
   debug = false,
   ui = {
-    border = EcoVim.ui.float.border,
+    border = CandyVim.ui.float.border,
   }
 })
 

@@ -1,11 +1,14 @@
-# Ecovim: Frontend Neovim Config
+# CandyVim: Eye Candy Neovim Config
 
-[![Last commit](https://img.shields.io/github/last-commit/ecosse3/nvim?style=for-the-badge)](https://github.com/ecosse3/nvim/commits/master)
-![Stars](https://img.shields.io/github/stars/ecosse3/nvim?style=for-the-badge)
-![License](https://img.shields.io/github/license/ecosse3/nvim?style=for-the-badge)
+[![Last commit](https://img.shields.io/github/last-commit/doctorfree/CandyVim?style=for-the-badge)](https://github.com/doctorfree/CandyVim/commits/master)
+![Stars](https://img.shields.io/github/stars/doctorfree/CandyVim?style=for-the-badge)
+![License](https://img.shields.io/github/license/doctorfree/CandyVim?style=for-the-badge)
 ![Neovim Version](https://img.shields.io/badge/For%20Neovim-0.9+-yellowgreen?style=for-the-badge&logo=neovim&logoColor=d8abbb&color=d8abbb)
 
-### A non-minimal Neovim config built to work most efficiently with Frontend Development.
+### An Eye Candy Neovim config built to work most efficiently with Frontend Development
+
+This is based on [Ecovim](https://github.com/ecosse3/nvim) with a lot of useless eye candy
+thrown in to demonstrate how useful Neovim is even loaded up with candy.
 
 ## Features
 
@@ -22,7 +25,7 @@
 - Debugging with [nvim-dap](https://github.com/mfussenegger/nvim-dap) (works with React.js & React Native)
 - Automatic Treesitter-based folding with imports folded by default
 - Current code context via [nvim-navic](https://github.com/SmiteshP/nvim-navic)
-- Beautiful and functional custom statusline built with [galaxyline.nvim](https://github.com/glepnir/galaxyline.nvim) 
+- Beautiful and functional custom statusline built with [galaxyline.nvim](https://github.com/glepnir/galaxyline.nvim)
 - Git management with [Lazygit](https://github.com/jesseduffield/lazygit), custom telescope commits view with [git-delta](https://github.com/dandavison/delta), [gitsigns](https://github.com/lewis6991/gitsigns.nvim) & [diffview](https://github.com/sindrets/diffview.nvim), custom git blame
 
 And of course usage of [telescope](https://github.com/nvim-telescope/telescope.nvim), [nvim-tree](https://github.com/kyazdani42/nvim-tree.lua), [barbar](https://github.com/romgrk/barbar.nvim), [cmp](https://github.com/hrsh7th/nvim-cmp), [treesitter](https://github.com/nvim-treesitter/nvim-treesitter), [blankline](https://github.com/lukas-reineke/indent-blankline.nvim) & more!
@@ -86,7 +89,7 @@ Make sure to run `:TSInstall <lang>` for specific language you want to install.
 
 ## Configuration
 
-To change EcoVim related config use the `config/EcoVim.lua` file.
+To change CandyVim related config use the `config/CandyVim.lua` file.
 
 To change vim settings use the `config/options.lua` file.
 
@@ -94,7 +97,7 @@ To change plugin related settings use the specific `plugins/[name].lua` file. So
 
 ## Keybindings
 
-Currently I have no idea how to write for you my whole workflow of using Ecovim config in React.js projects I am working on,\
+Currently I have no idea how to write for you my whole workflow of using CandyVim config in React.js projects I am working on,\
 but I can write you the most useful custom key bindings by the frequency I use them.
 
 Space (SPC) is my Leader key.
@@ -256,9 +259,9 @@ Check out the which-key menu and keybindings.lua for most used maps.
 
 Measured on M1.
 
-Ecovim started in 91.13ms 
+CandyVim started in 91.13ms
 
-## Future Todo 
+## Future Todo
 
 | Description                                                          | Progress                                                           |
 |----------------------------------------------------------------------|--------------------------------------------------------------------|

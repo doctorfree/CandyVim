@@ -24,7 +24,7 @@ vim.api.nvim_create_autocmd("BufEnter", { pattern = { "package.json" },
 vim.api.nvim_create_autocmd("FileType",
   { pattern = "*",
     callback = function()
-      if EcoVim.plugins.zen.enabled and vim.bo.filetype ~= "alpha" then
+      if CandyVim.plugins.zen.enabled and vim.bo.filetype ~= "alpha" then
         pwk.attach_zen(0)
       end
     end

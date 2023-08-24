@@ -1,4 +1,4 @@
-local icons = EcoVim.icons
+local icons = CandyVim.icons
 
 require('package-info').setup
     {

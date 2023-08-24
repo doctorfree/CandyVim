@@ -37,7 +37,7 @@ wk.setup {
     group = "+", -- symbol prepended to a group
   },
   window = {
-    border = EcoVim.ui.float.border or "rounded", -- none, single, double, shadow, rounded
+    border = CandyVim.ui.float.border or "rounded", -- none, single, double, shadow, rounded
     position = "bottom", -- bottom, top
     margin = { 1, 0, 1, 0 }, -- extra window margin [top, right, bottom, left]
     padding = { 2, 2, 2, 2 }, -- extra window padding [top, right, bottom, left]
@@ -100,7 +100,7 @@ local normal_mode_mappings = {
   ['q'] = { 'quicklist' },
 
   ['/'] = {
-    name = 'Ecovim',
+    name = 'Candyvim',
     ['/'] = { '<cmd>Alpha<CR>',                                 'open dashboard' },
     c = { '<cmd>e $MYVIMRC<CR>',                                'open config' },
     i = { '<cmd>Lazy<CR>',                                      'manage plugins' },

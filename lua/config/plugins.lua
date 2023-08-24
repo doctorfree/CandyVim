@@ -129,7 +129,7 @@ return {
       "saadparwaiz1/cmp_luasnip",
       { "L3MON4D3/LuaSnip", dependencies = "rafamadriz/friendly-snippets" },
       {
-        cond = EcoVim.plugins.ai.tabnine.enabled,
+        cond = CandyVim.plugins.ai.tabnine.enabled,
         "tzachar/cmp-tabnine",
         build = "./install.sh",
       },
@@ -141,7 +141,7 @@ return {
       },
       {
         "zbirenbaum/copilot-cmp",
-        cond = EcoVim.plugins.ai.copilot.enabled,
+        cond = CandyVim.plugins.ai.copilot.enabled,
         config = function()
           require("copilot_cmp").setup()
         end,
@@ -320,12 +320,12 @@ return {
     config = function()
       require("plugins.zen")
     end,
-    cond = EcoVim.plugins.zen.enabled,
+    cond = CandyVim.plugins.zen.enabled,
   },
   {
     "folke/twilight.nvim",
     config = true,
-    cond = EcoVim.plugins.zen.enabled,
+    cond = CandyVim.plugins.zen.enabled,
   },
   {
     "folke/flash.nvim",
@@ -449,7 +449,7 @@ return {
     "airblade/vim-rooter",
     event = "VeryLazy",
     config = function()
-      vim.g.rooter_patterns = EcoVim.plugins.rooter.patterns
+      vim.g.rooter_patterns = CandyVim.plugins.rooter.patterns
       vim.g.rooter_silent_chdir = 1
       vim.g.rooter_resolve_links = 1
     end,
@@ -528,7 +528,7 @@ return {
   },
   {
     "folke/noice.nvim",
-    cond = EcoVim.plugins.experimental_noice.enabled,
+    cond = CandyVim.plugins.experimental_noice.enabled,
     lazy = false,
     config = function()
       require("plugins.noice")
@@ -536,7 +536,7 @@ return {
   },
   {
     "chrisgrieser/nvim-spider",
-    cond = EcoVim.plugins.jump_by_subwords.enabled,
+    cond = CandyVim.plugins.jump_by_subwords.enabled,
     lazy = true,
     keys = { "w", "e", "b", "ge" },
     config = function()
@@ -583,7 +583,7 @@ return {
   -- AI
   {
     "jcdickinson/codeium.nvim",
-    cond = EcoVim.plugins.ai.codeium.enabled,
+    cond = CandyVim.plugins.ai.codeium.enabled,
     event = "InsertEnter",
     cmd = "Codeium",
     dependencies = {
@@ -594,7 +594,7 @@ return {
   },
   {
     "zbirenbaum/copilot.lua",
-    cond = EcoVim.plugins.ai.copilot.enabled,
+    cond = CandyVim.plugins.ai.copilot.enabled,
     event = "InsertEnter",
     config = function()
       require("plugins.copilot")
@@ -602,7 +602,7 @@ return {
   },
   {
     "Bryley/neoai.nvim",
-    cond = EcoVim.plugins.ai.chatgpt.enabled,
+    cond = CandyVim.plugins.ai.chatgpt.enabled,
     dependencies = {
       "MunifTanjim/nui.nvim",
     },

@@ -1,14 +1,14 @@
 ------------------------------------------------
 --                                            --
 --    This is a main configuration file for    --
---                    EcoVim                  --
+--                    CandyVim                  --
 --      Change variables which you need to    --
 --                                            --
 ------------------------------------------------
 
 local icons = require("utils.icons")
 
-EcoVim = {
+CandyVim = {
 	colorscheme = "tokyonight",
 	ui = {
 		float = {

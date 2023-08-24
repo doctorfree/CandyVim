@@ -98,18 +98,18 @@ end
 -- │ Setup                                                    │
 -- ╰──────────────────────────────────────────────────────────╯
 local source_mapping = {
-  npm = EcoVim.icons.terminal .. "NPM",
-  cmp_tabnine = EcoVim.icons.light,
-  Copilot = EcoVim.icons.copilot,
-  Codeium = EcoVim.icons.codeium,
-  nvim_lsp = EcoVim.icons.paragraph .. "LSP",
-  buffer = EcoVim.icons.buffer .. "BUF",
-  nvim_lua = EcoVim.icons.bomb,
-  luasnip = EcoVim.icons.snippet .. "SNP",
-  calc = EcoVim.icons.calculator,
-  path = EcoVim.icons.folderOpen2,
-  treesitter = EcoVim.icons.tree,
-  zsh = EcoVim.icons.terminal .. "ZSH",
+  npm = CandyVim.icons.terminal .. "NPM",
+  cmp_tabnine = CandyVim.icons.light,
+  Copilot = CandyVim.icons.copilot,
+  Codeium = CandyVim.icons.codeium,
+  nvim_lsp = CandyVim.icons.paragraph .. "LSP",
+  buffer = CandyVim.icons.buffer .. "BUF",
+  nvim_lua = CandyVim.icons.bomb,
+  luasnip = CandyVim.icons.snippet .. "SNP",
+  calc = CandyVim.icons.calculator,
+  path = CandyVim.icons.folderOpen2,
+  treesitter = CandyVim.icons.tree,
+  zsh = CandyVim.icons.terminal .. "ZSH",
   Array = " ",
   Boolean = " ",
   Class = " ",
@@ -177,7 +177,7 @@ cmp.setup({
     ["<CR>"] = cmp.mapping.confirm({
       -- this is the important line for Copilot
       behavior = cmp.ConfirmBehavior.Replace,
-      select = EcoVim.plugins.completion.select_first_on_enter,
+      select = CandyVim.plugins.completion.select_first_on_enter,
     }),
     ["<Tab>"] = cmp.mapping(function(fallback)
       if cmp.visible() then
@@ -333,7 +333,7 @@ cmp.setup({
 -- ╭──────────────────────────────────────────────────────────╮
 -- │ Tabnine Setup                                            │
 -- ╰──────────────────────────────────────────────────────────╯
-if EcoVim.plugins.ai.tabnine.enabled then
+if CandyVim.plugins.ai.tabnine.enabled then
   tabnine:setup({
     max_lines = 1000,
     max_num_results = 3,

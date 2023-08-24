@@ -1,7 +1,7 @@
 local actions    = require('telescope.actions')
 local previewers = require('telescope.previewers')
 local builtin    = require('telescope.builtin')
-local icons      = EcoVim.icons
+local icons      = CandyVim.icons
 
 require('telescope').load_extension('fzf')
 require('telescope').load_extension('repo')
@@ -118,7 +118,7 @@ M.edit_neovim = function()
       color_devicons   = true,
       cwd              = "~/.config/nvim",
       previewer        = false,
-      prompt_title     = "Ecovim Dotfiles",
+      prompt_title     = "Candyvim Dotfiles",
       sorting_strategy = "ascending",
       winblend         = 4,
       layout_config    = {

@@ -1,4 +1,4 @@
-require('config.EcoVim')
+require('config.CandyVim')
 
 require('utils.globals')
 require('utils.functions')

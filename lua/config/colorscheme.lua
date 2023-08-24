@@ -62,25 +62,25 @@ tokyonight.setup({
 })
 
 -- Set Colorscheme
-vim.cmd("colorscheme " .. EcoVim.colorscheme)
+vim.cmd("colorscheme " .. CandyVim.colorscheme)
 
--- Ecovim Colors
-vim.api.nvim_set_hl(0, "EcovimPrimary", { fg = "#488dff" })
-vim.api.nvim_set_hl(0, "EcovimSecondary", { fg = "#FFA630" })
+-- Candyvim Colors
+vim.api.nvim_set_hl(0, "CandyvimPrimary", { fg = "#488dff" })
+vim.api.nvim_set_hl(0, "CandyvimSecondary", { fg = "#FFA630" })
 
-vim.api.nvim_set_hl(0, "EcovimPrimaryBold", { bold = true, fg = "#488DFF" })
-vim.api.nvim_set_hl(0, "EcovimSecondaryBold", { bold = true, fg = "#FFA630" })
+vim.api.nvim_set_hl(0, "CandyvimPrimaryBold", { bold = true, fg = "#488DFF" })
+vim.api.nvim_set_hl(0, "CandyvimSecondaryBold", { bold = true, fg = "#FFA630" })
 
-vim.api.nvim_set_hl(0, "EcovimHeader", { bold = true, fg = "#488DFF" })
-vim.api.nvim_set_hl(0, "EcovimHeaderInfo", { bold = true, fg = "#FFA630" })
-vim.api.nvim_set_hl(0, "EcovimFooter", { bold = true, fg = "#FFA630" })
+vim.api.nvim_set_hl(0, "CandyvimHeader", { bold = true, fg = "#488DFF" })
+vim.api.nvim_set_hl(0, "CandyvimHeaderInfo", { bold = true, fg = "#FFA630" })
+vim.api.nvim_set_hl(0, "CandyvimFooter", { bold = true, fg = "#FFA630" })
 
-vim.api.nvim_set_hl(0, "EcovimNvimTreeTitle", { bold = true, fg = "#FFA630", bg = "#16161e" })
+vim.api.nvim_set_hl(0, "CandyvimNvimTreeTitle", { bold = true, fg = "#FFA630", bg = "#16161e" })
 
 -- Tokyonight Colorscheme Specific Config
-if EcoVim.colorscheme == "tokyonight" then
+if CandyVim.colorscheme == "tokyonight" then
   -- Lines
-  vim.api.nvim_set_hl(0, "CursorLineNR", { link = "EcovimSecondary" })
+  vim.api.nvim_set_hl(0, "CursorLineNR", { link = "CandyvimSecondary" })
   vim.api.nvim_set_hl(0, "LineNr", { link = "Comment" })
 
   -- Floats/Windows
@@ -104,7 +104,7 @@ if EcoVim.colorscheme == "tokyonight" then
   vim.api.nvim_set_hl(0, "TSRainbowRed", { fg = c.blue, ctermfg = 9 })
   vim.api.nvim_set_hl(0, "RainbowDelimiterRed", { fg = c.blue, ctermfg = 9 })
   vim.api.nvim_set_hl(0, "Boolean", { fg = "#F7768E" })
-  vim.api.nvim_set_hl(0, "BufferOffset", { link = "EcovimSecondary" })
+  vim.api.nvim_set_hl(0, "BufferOffset", { link = "CandyvimSecondary" })
   vim.api.nvim_set_hl(0, "LspInlayHint", { link = "LspCodeLens" })
 
   -- Bufferline
