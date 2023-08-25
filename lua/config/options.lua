@@ -40,7 +40,7 @@ local options = {
   backup         = false,                   --- Recommended by coc
   --- Concealed text is completely hidden unless it has a custom replacement character defined (needed for dynamically showing tailwind classes)
   conceallevel   = 2,
-  concealcursor  = "",                      --- Set to an empty string to expand tailwind class when on cursorline 
+  concealcursor  = "",                      --- Set to an empty string to expand tailwind class when on cursorline
   encoding       = "utf-8",                 --- The encoding displayed
   errorbells     = false,                   --- Disables sound effect for errors
   fileencoding   = "utf-8",                 --- The encoding written to file
@@ -49,7 +49,7 @@ local options = {
 }
 
 local globals = {
-  mapleader                   = ' ',        --- Map leader key to SPC
+  mapleader                   = ',',        --- Map leader key to SPC
   speeddating_no_mappings     = 1,          --- Disable default mappings for speeddating
 }
 

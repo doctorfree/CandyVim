@@ -1,5 +1,5 @@
 return {
-  -- Themes
+  -
   {
     "folke/tokyonight.nvim",
     lazy = false,
@@ -30,6 +30,24 @@ return {
     'echasnovski/mini.animate',
     version = '*',
     config = true,
+  },
+  -- Alternate Duck configurations:
+  -- popular candidates: 🦆 ඞ  🦀 🐈 🐎 🦖 🐤
+  --
+  -- You can also specify how fast a duck moves (measured in steps per second):
+  --
+  -- A pretty fast duck
+  -- vim.keymap.set('n', '<leader>dd', function() require("duck").hatch("🦆", 10) end, {})
+  -- Quite a mellow cat
+  -- vim.keymap.set('n', '<leader>dc', function() require("duck").hatch("🐈", 0.75) end, {})
+  {
+    'tamton-aquib/duck.nvim',
+    -- <leader>d is already taken for debug keymaps
+    keys = { "<Leader>Dd", "<Leader>Dk" },
+    config = function()
+      vim.keymap.set('n', '<leader>Dd', function() require("duck").hatch() end, {})
+      vim.keymap.set('n', '<leader>Dk', function() require("duck").cook() end, {})
+    end
   },
   {
     'tamton-aquib/flirt.nvim',
