@@ -1,5 +1,5 @@
 return {
-  -
+  -- Themes
   {
     "folke/tokyonight.nvim",
     lazy = false,
