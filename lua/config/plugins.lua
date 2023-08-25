@@ -25,6 +25,19 @@ return {
     end,
   },
 
+  -- Candy
+  {
+    'echasnovski/mini.animate',
+    version = '*',
+    config = true,
+  },
+  {
+    'tamton-aquib/flirt.nvim',
+    config = function()
+      require("plugins.flirt")
+    end,
+  },
+
   -- Treesitter
   {
     "nvim-treesitter/nvim-treesitter",
