@@ -100,7 +100,7 @@ To change plugin related settings use the specific `plugins/[name].lua` file. So
 Currently I have no idea how to write for you my whole workflow of using CandyVim config in React.js projects I am working on,\
 but I can write you the most useful custom key bindings by the frequency I use them.
 
-Space (SPC) is my Leader key.
+Comma (,) is my Leader key.
 
 <details>
 <summary>File Explorer</summary>
@@ -131,9 +131,9 @@ Space (SPC) is my Leader key.
 | <C - p>      | Telescope git files |
 | <S - p>      | Telescope live grep |
 | s            | Enables lightspeed  |
-| SPC s d      | Search dotfiles     |
-| SPC s h      | Search file history |
-| SPC s s      | Search history      |
+| , s d      | Search dotfiles     |
+| , s h      | Search file history |
+| , s s      | Search history      |
 
 </details>
 
@@ -144,17 +144,17 @@ Space (SPC) is my Leader key.
 
 | Key Bindings           | Description                                       |
 |------------------------|---------------------------------------------------|
-| <C - Space> or SPC c a | Code action                                       |
+| <C - Space> or , c a | Code action                                       |
 | <S - K>                | Show documentation under cursor                   |
 | gd                     | Go to definition                                  |
 | gr                     | Go to references                                  |
 | ]g                     | Go to next diagnostic                             |
 | [g                     | Go to prev diagnostic                             |
-| SPC c f                | Format document (usually ESLint/Prettier)         |
-| SPC c r                | Rename                                            |
-| SPC c q                | Quick fix - when I exactly know if it will fix it |
-| SPC c d                | Local diagnostics list                            |
-| SPC c o                | Organize imports                                  |
+| , c f                | Format document (usually ESLint/Prettier)         |
+| , c r                | Rename                                            |
+| , c q                | Quick fix - when I exactly know if it will fix it |
+| , c d                | Local diagnostics list                            |
+| , c o                | Organize imports                                  |
 
 </details>
 
@@ -165,17 +165,17 @@ Space (SPC) is my Leader key.
 
 | Key Bindings | Description                                                                                                                              |
 |--------------|------------------------------------------------------------------------------------------------------------------------------------------|
-| SPC g g      | Lazygit - for committing and branch change                                                                                               |
-| SPC g s      | Telescope status - when I want to change/search file I am working on with git changes                                                    |
+| , g g      | Lazygit - for committing and branch change                                                                                               |
+| , g s      | Telescope status - when I want to change/search file I am working on with git changes                                                    |
 | ]c           | Go to next change hunk                                                                                                                   |
 | [c           | Go to prev change hunk                                                                                                                   |
-| SPC g d      | Advanced powerful diff view with many filters for debugging code, checking previous changes etc.                                         |
-| SPC g m      | View hunk diff of a line under cursor                                                                                                    |
-| SPC g h r    | Reset changed hunk under cursor - I like to check quickly what I have changed in that line and then just type 'u' to go back             |
-| SPC g h s    | Stage hunk under cursor - Sometimes it's faster than selecting lines in Lazygit, so I can stage specific lines and then just do a commit |
-| SPC g l c    | Quick check of previous commit in current buffer, <C-s> inside to switch preview                                                         |
-| SPC g w c    | Creates a new worktree. Recommended directory is `../path`                                                                               |
-| SPC g w w    | Switches to a worktree. <C-d> removes worktree.                                                                                          |
+| , g d      | Advanced powerful diff view with many filters for debugging code, checking previous changes etc.                                         |
+| , g m      | View hunk diff of a line under cursor                                                                                                    |
+| , g h r    | Reset changed hunk under cursor - I like to check quickly what I have changed in that line and then just type 'u' to go back             |
+| , g h s    | Stage hunk under cursor - Sometimes it's faster than selecting lines in Lazygit, so I can stage specific lines and then just do a commit |
+| , g l c    | Quick check of previous commit in current buffer, <C-s> inside to switch preview                                                         |
+| , g w c    | Creates a new worktree. Recommended directory is `../path`                                                                               |
+| , g w w    | Switches to a worktree. <C-d> removes worktree.                                                                                          |
 
 </details>
 
@@ -187,11 +187,11 @@ Space (SPC) is my Leader key.
 | Key Bindings | Description                                                                                                                                                                                                                                                                             |
 |--------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | <C - e>      | Toggles nvim-tree file explorer                                                                                                                                                                                                                                                         |
-| SPC p w      | Find word under cursor in project - very useful to find where component is used. Just use binding and type '<'. There is a lot of alternatives like LSP references but I like it with telescope and to not find only references but whole text under cursor.                            |
-| SPC p f      | Find file under cursor in project - it finds files in project which contains text under cursor. Useful when you name directories by component name in React and wants to go quickly to file. 'gd' is better but in some projects without TS or with mixed JS/TS it cannot work properly |
-| SPC p t      | Finds TODOs/NOTES in project                                                                                                                                                                                                                                                            |
-| SPC p l      | Switch between projects                                                                                                                                                                                                                                                                 |
-| SPC p s      | Save session to load it later from Dashboard                                                                                                                                                                                                                                            |
+| , p w      | Find word under cursor in project - very useful to find where component is used. Just use binding and type '<'. There is a lot of alternatives like LSP references but I like it with telescope and to not find only references but whole text under cursor.                            |
+| , p f      | Find file under cursor in project - it finds files in project which contains text under cursor. Useful when you name directories by component name in React and wants to go quickly to file. 'gd' is better but in some projects without TS or with mixed JS/TS it cannot work properly |
+| , p t      | Finds TODOs/NOTES in project                                                                                                                                                                                                                                                            |
+| , p l      | Switch between projects                                                                                                                                                                                                                                                                 |
+| , p s      | Save session to load it later from Dashboard                                                                                                                                                                                                                                            |
 
 </details>
 
@@ -217,12 +217,12 @@ Space (SPC) is my Leader key.
 | Key Bindings | Description                                                                       |
 |--------------|-----------------------------------------------------------------------------------|
 | ga (visual)  | Aligns selection based on separator (comma, semi-colon, colon etc.)               |
-| SPC t m      | Enables Table Mode. Do it in markdown file with some table and you will see magic |
-| SPC t i C    | (Only when Table Mode Enabled) Insert column before                               |
-| SPC t i c    | (Only when Table Mode Enabled) Insert column after                                |
-| SPC t d c    | (Only when Table Mode Enabled) Delete column                                      |
-| SPC t d r    | (Only when Table Mode Enabled) Delete row                                         |
-| SPC t s      | (Only when Table Mode Enabled) Sort table alphabetically                          |
+| , t m      | Enables Table Mode. Do it in markdown file with some table and you will see magic |
+| , t i C    | (Only when Table Mode Enabled) Insert column before                               |
+| , t i c    | (Only when Table Mode Enabled) Insert column after                                |
+| , t d c    | (Only when Table Mode Enabled) Delete column                                      |
+| , t d r    | (Only when Table Mode Enabled) Delete row                                         |
+| , t s      | (Only when Table Mode Enabled) Sort table alphabetically                          |
 
 </details>
 
