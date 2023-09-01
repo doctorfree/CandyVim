@@ -7,7 +7,7 @@ local dashboard = require("alpha.themes.dashboard")
 local icons = require("utils.icons")
 local if_nil = vim.F.if_nil
 local fn = vim.fn
-local config_dir = fn.stdpath('config')
+local config_dir = fn.stdpath("config")
 
 -- ╭──────────────────────────────────────────────────────────╮
 -- │ Header                                                   │
@@ -24,8 +24,8 @@ local header = {
   "(_______/|/     \\||/    )_)(______/    \\_/      \\_/   \\_______/|/     \\|",
 }
 
-dashboard.section.header.type = "text";
-dashboard.section.header.val = header;
+dashboard.section.header.type = "text"
+dashboard.section.header.val = header
 dashboard.section.header.opts = {
   position = "center",
   hl = "CandyvimHeader",
@@ -36,19 +36,21 @@ dashboard.section.header.opts = {
 -- ╰──────────────────────────────────────────────────────────╯
 
 local thingy = io.popen('echo "$(LANG=en_us_88591; date +%a) $(date +%d) $(LANG=en_us_88591; date +%b)" | tr -d "\n"')
-if thingy == nil then return end
+if thingy == nil then
+  return
+end
 local date = thingy:read("*a")
 thingy:close()
 
-local datetime = os.date " %H:%M"
+local datetime = os.date(" %H:%M")
 
 local hi_top_section = {
   type = "text",
-  val =  "┌────────────   Today is " .. date .. " ────────────┐",
+  val = "┌────────────   Today is " .. date .. " ────────────┐",
   opts = {
     position = "center",
-    hl = "CandyvimHeaderInfo"
-  }
+    hl = "CandyvimHeaderInfo",
+  },
 }
 
 local hi_middle_section = {
@@ -56,17 +58,19 @@ local hi_middle_section = {
   val = "│                                                │",
   opts = {
     position = "center",
-    hl = "CandyvimHeaderInfo"
-  }
+    hl = "CandyvimHeaderInfo",
+  },
 }
 
 local hi_bottom_section = {
   type = "text",
-  val = "└───══───══───══───  " .. datetime .. "  ───══───══───══────┘",
+  val = "└───══───══───══───  "
+    .. datetime
+    .. "  ───══───══───══────┘",
   opts = {
     position = "center",
-    hl = "CandyvimHeaderInfo"
-  }
+    hl = "CandyvimHeaderInfo",
+  },
 }
 
 -- ╭──────────────────────────────────────────────────────────╮
@@ -81,44 +85,44 @@ local leader = "COMMA"
 --- @param keybind string optional
 --- @param keybind_opts table optional
 local function button(sc, txt, keybind, keybind_opts)
-    local sc_ = sc:gsub("%s", ""):gsub(leader, "<leader>")
+  local sc_ = sc:gsub("%s", ""):gsub(leader, "<leader>")
 
-    local opts = {
-        position = "center",
-        shortcut = sc,
-        cursor = 5,
-        width = 50,
-        align_shortcut = "right",
-        hl_shortcut = "CandyvimPrimary",
-    }
-    if keybind then
-        keybind_opts = if_nil(keybind_opts, { noremap = true, silent = true, nowait = true })
-        opts.keymap = { "n", sc_, keybind, keybind_opts }
-    end
+  local opts = {
+    position = "center",
+    shortcut = sc,
+    cursor = 5,
+    width = 50,
+    align_shortcut = "right",
+    hl_shortcut = "CandyvimPrimary",
+  }
+  if keybind then
+    keybind_opts = if_nil(keybind_opts, { noremap = true, silent = true, nowait = true })
+    opts.keymap = { "n", sc_, keybind, keybind_opts }
+  end
 
-    local function on_press()
-        -- local key = vim.api.nvim_replace_termcodes(keybind .. "<Ignore>", true, false, true)
-        local key = vim.api.nvim_replace_termcodes(sc_ .. "<Ignore>", true, false, true)
-        vim.api.nvim_feedkeys(key, "t", false)
-    end
+  local function on_press()
+    -- local key = vim.api.nvim_replace_termcodes(keybind .. "<Ignore>", true, false, true)
+    local key = vim.api.nvim_replace_termcodes(sc_ .. "<Ignore>", true, false, true)
+    vim.api.nvim_feedkeys(key, "t", false)
+  end
 
-    return {
-        type = "button",
-        val = txt,
-        on_press = on_press,
-        opts = opts,
-    }
+  return {
+    type = "button",
+    val = txt,
+    on_press = on_press,
+    opts = opts,
+  }
 end
 
 dashboard.section.buttons.val = {
-  button("f",     icons.fileNoBg .. " " .. "Find File",             "<cmd>lua require('plugins.telescope').project_files()<CR>",    {}),
-  button("w",     icons.word .. " " .. "Find Word",                 "<cmd>lua require('plugins.telescope.pickers.multi-rg')()<CR>", {}),
-  button("r",   icons.fileRecent .. " " .. "Recents",             "<cmd>Telescope oldfiles hidden=true<CR>",                      {}),
-  button("s", icons.timer .. " " .. "Load Current Dir Session", "<cmd>SessionManager load_current_dir_session<CR>",             {}),
-  button("u",   icons.packageDown .. " " .. "Update Plugins",     "<cmd>Lazy update<CR>",                                         {}),
-  button("m",   icons.package .. " " .. "Manage Plugins",         "<cmd>Lazy<CR>",                                                {}),
-  button("c",   icons.cog .. " " .. "Settings",                   "<cmd>e $MYVIMRC<CR>",                                          {}),
-  button("q",         icons.exit .. " " .. "Exit",                      "<cmd>exit<CR>",                                                {}),
+  button("f", icons.fileNoBg .. " " .. "Find File", "<cmd>lua require('plugins.telescope').project_files()<CR>", {}),
+  button("w", icons.word .. " " .. "Find Word", "<cmd>lua require('plugins.telescope.pickers.multi-rg')()<CR>", {}),
+  button("r", icons.fileRecent .. " " .. "Recents", "<cmd>Telescope oldfiles hidden=true<CR>", {}),
+  button("s", icons.timer .. " " .. "Load Current Dir Session", "<cmd>SessionManager load_current_dir_session<CR>", {}),
+  button("u", icons.packageDown .. " " .. "Update Plugins", "<cmd>Lazy update<CR>", {}),
+  button("m", icons.package .. " " .. "Manage Plugins", "<cmd>Lazy<CR>", {}),
+  button("c", icons.cog .. " " .. "Settings", "<cmd>e $MYVIMRC<CR>", {}),
+  button("q", icons.exit .. " " .. "Exit", "<cmd>exit<CR>", {}),
 }
 
 -- ╭──────────────────────────────────────────────────────────╮
@@ -127,12 +131,16 @@ dashboard.section.buttons.val = {
 
 local function file_exists(file)
   local f = io.open(file, "rb")
-  if f then f:close() end
+  if f then
+    f:close()
+  end
   return f ~= nil
 end
 
 local function line_from(file)
-  if not file_exists(file) then return {} end
+  if not file_exists(file) then
+    return {}
+  end
   local lines = {}
   for line in io.lines(file) do
     lines[#lines + 1] = line
@@ -148,7 +156,7 @@ local function footer()
 end
 
 dashboard.section.footer.val = {
-  footer()
+  footer(),
 }
 dashboard.section.footer.opts = {
   position = "center",
@@ -170,19 +178,19 @@ local section = {
 
 local opts = {
   layout = {
-    {type = "padding", val = 3},
+    { type = "padding", val = 3 },
     section.header,
-    {type = "padding", val = 1},
+    { type = "padding", val = 1 },
     section.hi_top_section,
     section.hi_middle_section,
     section.hi_bottom_section,
-    {type = "padding", val = 2},
+    { type = "padding", val = 2 },
     section.buttons,
-    {type = "padding", val = 3},
+    { type = "padding", val = 3 },
     section.footer,
   },
   opts = {
-    margin = 5
+    margin = 5,
   },
 }
 
@@ -210,3 +218,15 @@ vim.api.nvim_create_autocmd("FileType", {
     })
   end,
 })
+
+-- ╭──────────────────────────────────────────────────────────╮
+-- │ Hatch a pretty fast duck and a mellow cat                │
+-- ╰──────────────────────────────────────────────────────────╯
+-- A pretty fast duck
+vim.keymap.set("n", "<leader>dd", function()
+  require("duck").hatch("🦆", 10)
+end, {})
+-- Quite a mellow cat
+vim.keymap.set("n", "<leader>dc", function()
+  require("duck").hatch("🐈", 0.75)
+end, {})
