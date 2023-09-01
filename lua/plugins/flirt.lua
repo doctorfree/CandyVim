@@ -8,5 +8,4 @@ require("flirt").setup {
     custom_filter = function(buffer, win_config)
         return vim.bo[buffer].filetype == 'cmp_menu' -- avoids animation
     end
-    -- more options on the way.
 }
