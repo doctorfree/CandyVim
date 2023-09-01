@@ -207,6 +207,8 @@ local normal_mode_mappings = {
     w = { 'watches' },
   },
 
+  D = { name = 'Duck' },
+
   g = {
     name = 'Git',
     a = { '<cmd>!git add %:p<CR>',                                              'add current' },

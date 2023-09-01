@@ -115,8 +115,7 @@ local function button(sc, txt, keybind, keybind_opts)
 end
 
 dashboard.section.buttons.val = {
-  button("k", icons.timer .. " " .. "Kill Duck and Cat", "<cmd>lua require("duck").cook()<CR>", {}),
-
+  button("k", icons.timer .. " " .. "Kill Duck and Cat", "<cmd>lua require('duck').cook()<CR>", {}),
   button("f", icons.fileNoBg .. " " .. "Find File", "<cmd>lua require('plugins.telescope').project_files()<CR>", {}),
   button("w", icons.word .. " " .. "Find Word", "<cmd>lua require('plugins.telescope.pickers.multi-rg')()<CR>", {}),
   button("r", icons.fileRecent .. " " .. "Recents", "<cmd>Telescope oldfiles hidden=true<CR>", {}),

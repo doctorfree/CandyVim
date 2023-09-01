@@ -63,8 +63,8 @@ vim.cmd([[
 ]])
 
 -- Quickfix
-keymap("n", "<Space>,", ":cp<CR>", silent)
-keymap("n", "<Space>.", ":cn<CR>", silent)
+keymap("n", "<Comma>,", ":cp<CR>", silent)
+keymap("n", "<Comma>.", ":cn<CR>", silent)
 
 -- Toggle quicklist
 keymap("n", "<leader>q", "<cmd>lua require('utils').toggle_quicklist()<CR>", silent)
