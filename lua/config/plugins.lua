@@ -52,7 +52,8 @@ return {
       "<Leader>Dg",
       "<Leader>Dh",
       "<Leader>Dt",
-      "<Leader>Dk"
+      "<Leader>Dk",
+      "<Leader>DK"
     },
     config = function()
       vim.keymap.set('n', '<leader>Ds', function() require("duck").hatch("🦆", 1.5) end, { desc = "Hatch Slow Duck" })
@@ -64,6 +65,14 @@ return {
       vim.keymap.set('n', '<leader>Dc', function() require("duck").hatch("🐈", 2) end, { desc = "Hatch Cat" })
       vim.keymap.set('n', '<leader>Dd', function() require("duck").hatch() end, { desc = "Hatch Duck" })
       vim.keymap.set('n', '<leader>Dk', function() require("duck").cook() end, { desc = "Cook Duck" })
+      vim.keymap.set('n', '<leader>DK', function()
+        require("duck").cook()
+        require("duck").cook()
+        require("duck").cook()
+        require("duck").cook()
+        require("duck").cook()
+        require("duck").cook()
+      end, { desc = "Cook Many Ducks" })
     end
   },
   {
