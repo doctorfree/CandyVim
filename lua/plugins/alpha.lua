@@ -115,6 +115,8 @@ local function button(sc, txt, keybind, keybind_opts)
 end
 
 dashboard.section.buttons.val = {
+  button("k", icons.timer .. " " .. "Kill Duck and Cat", "<cmd>lua require("duck").cook()<CR>", {}),
+
   button("f", icons.fileNoBg .. " " .. "Find File", "<cmd>lua require('plugins.telescope').project_files()<CR>", {}),
   button("w", icons.word .. " " .. "Find Word", "<cmd>lua require('plugins.telescope.pickers.multi-rg')()<CR>", {}),
   button("r", icons.fileRecent .. " " .. "Recents", "<cmd>Telescope oldfiles hidden=true<CR>", {}),
@@ -223,10 +225,6 @@ vim.api.nvim_create_autocmd("FileType", {
 -- │ Hatch a pretty fast duck and a mellow cat                │
 -- ╰──────────────────────────────────────────────────────────╯
 -- A pretty fast duck
-vim.keymap.set("n", "<leader>dd", function()
-  require("duck").hatch("🦆", 10)
-end, {})
+require("duck").hatch("🦆", 10)
 -- Quite a mellow cat
-vim.keymap.set("n", "<leader>dc", function()
-  require("duck").hatch("🐈", 0.75)
-end, {})
+require("duck").hatch("🐈", 0.75)
