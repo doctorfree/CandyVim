@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.0.0](https://github.com/doctorfree/CandyVim/compare/v3.7.0...v4.0.0) (2023-08-02)
+
+Forked Ecovim and adapted for use with eye candy for fun
+
+### Features
+
+* **plugins:** add duck and flirt plugins for eye candy
+* **plugins:** add duck and cat hatch button to alpha dashboard
+* **keymappings:** add keymaps for duck plugin to hatch and cook various "ducks"
+
 ## [3.7.0](https://github.com/ecosse3/nvim/compare/v3.6.0...v3.7.0) (2023-08-02)
 
 
