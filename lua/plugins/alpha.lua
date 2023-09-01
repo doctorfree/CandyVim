@@ -115,7 +115,10 @@ local function button(sc, txt, keybind, keybind_opts)
 end
 
 dashboard.section.buttons.val = {
-  button("k", icons.timer .. " " .. "Kill Duck and Cat", "<cmd>lua require('duck').cook() require('duck').cook()<CR>", {}),
+  -- ╭──────────────────────────────────────────────────────────╮
+  -- │ Hatch a pretty fast duck and a mellow cat                │
+  -- ╰──────────────────────────────────────────────────────────╯
+  button("h", icons.timer .. " " .. "Hatch Duck and Cat", "<cmd>lua require('duck').hatch('🦆', 7) require('duck').hatch('🐈', 2)<CR>", {}),
   button("f", icons.fileNoBg .. " " .. "Find File", "<cmd>lua require('plugins.telescope').project_files()<CR>", {}),
   button("w", icons.word .. " " .. "Find Word", "<cmd>lua require('plugins.telescope.pickers.multi-rg')()<CR>", {}),
   button("r", icons.fileRecent .. " " .. "Recents", "<cmd>Telescope oldfiles hidden=true<CR>", {}),
@@ -219,9 +222,3 @@ vim.api.nvim_create_autocmd("FileType", {
     })
   end,
 })
-
--- ╭──────────────────────────────────────────────────────────╮
--- │ Hatch a pretty fast duck and a mellow cat                │
--- ╰──────────────────────────────────────────────────────────╯
-require("duck").hatch("🦆", 7)
-require("duck").hatch("🐈", 2)
