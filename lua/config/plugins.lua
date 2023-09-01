@@ -44,6 +44,7 @@ return {
     'tamton-aquib/duck.nvim',
     -- <leader>d is already taken for debug keymaps
     keys = {
+      "<Leader>DA",
       "<Leader>Da",
       "<Leader>Di",
       "<Leader>Dc",
@@ -64,8 +65,18 @@ return {
       vim.keymap.set('n', '<leader>Di', function() require("duck").hatch("🐤", 3) end, { desc = "Hatch Chick" })
       vim.keymap.set('n', '<leader>Dc', function() require("duck").hatch("🐈", 2) end, { desc = "Hatch Cat" })
       vim.keymap.set('n', '<leader>Dd', function() require("duck").hatch() end, { desc = "Hatch Duck" })
+      vim.keymap.set('n', '<leader>DA', function()
+        require("duck").hatch()
+        require("duck").hatch("🦀", 1)
+        require("duck").hatch("🐈", 2)
+        require("duck").hatch("🦖", 3)
+        require("duck").hatch("🐤", 3)
+        require("duck").hatch("ඞ", 4)
+        require("duck").hatch("🐎", 5)
+      end, { desc = "Hatch All" })
       vim.keymap.set('n', '<leader>Dk', function() require("duck").cook() end, { desc = "Cook Duck" })
       vim.keymap.set('n', '<leader>DK', function()
+        require("duck").cook()
         require("duck").cook()
         require("duck").cook()
         require("duck").cook()
