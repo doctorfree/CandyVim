@@ -8,6 +8,7 @@ local icons = require("utils.icons")
 local if_nil = vim.F.if_nil
 local fn = vim.fn
 local config_dir = fn.stdpath("config")
+HatchDuck = true
 
 -- ╭──────────────────────────────────────────────────────────╮
 -- │ Header                                                   │
@@ -118,8 +119,8 @@ dashboard.section.buttons.val = {
   -- ╭──────────────────────────────────────────────────────────╮
   -- │ Hatch a pretty fast duck and a mellow cat                │
   -- ╰──────────────────────────────────────────────────────────╯
-  button("a", icons.squirrel .. " " .. "Adopt Cat, Hatch Duck", "<cmd>lua require('duck').hatch('🦆', 7) require('duck').hatch('🐈', 2)<CR>", {}),
-  button("l", icons.squirrel .. " " .. "Let Cat Out, Cook Duck", "<cmd>lua require('duck').cook() require('duck').cook()<CR>", {}),
+  button("d", icons.squirrel .. " " .. "Toggle Duck and Cat", "<cmd>lua if HatchDuck then require('duck').hatch('🦆', 7) require('duck').hatch('🐈', 2) HatchDuck = false else require('duck').cook() require('duck').cook() HatchDuck = true end<CR>", {}),
+  button("h", icons.hook .. " " .. "Hack", "<cmd>Hack<CR>", {}),
   button("f", icons.fileNoBg .. " " .. "Find File", "<cmd>lua require('plugins.telescope').project_files()<CR>", {}),
   button("w", icons.word .. " " .. "Find Word", "<cmd>lua require('plugins.telescope.pickers.multi-rg')()<CR>", {}),
   button("r", icons.fileRecent .. " " .. "Recents", "<cmd>Telescope oldfiles hidden=true<CR>", {}),

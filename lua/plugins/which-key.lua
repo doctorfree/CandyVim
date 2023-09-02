@@ -289,6 +289,17 @@ local normal_mode_mappings = {
     },
   },
 
+  G = {
+    name = 'Games',
+    b = { "<cmd>BlackJackNewGame<CR>",                  "Blackjack" },
+    h = { "<cmd>:Hack<CR>",                             "Hack" },
+    f = { "<cmd>:HackFollow<CR>",                       "Hack current buffer" },
+    s = { "<cmd>Sudoku<CR>",                            "Sudoku" },
+    v = { "<cmd>VimBeGood<CR>",                         "Vim-Be-Good" },
+    r = { "<cmd>CellularAutomaton make_it_rain<CR>",    "Make it Rain" },
+    g = { "<cmd>CellularAutomaton game_of_life<CR>",    "Game of Life" },
+  },
+
   g = {
     name = 'Git',
     a = { '<cmd>!git add %:p<CR>',                                              'add current' },
