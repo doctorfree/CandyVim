@@ -292,3 +292,8 @@ CandyVim started in 91.13ms
 | Create shell installer for Linux & MacOS        | ![100%](https://progress-bar.dev/100/?title=done&color=555555) |
 
 </details>
+
+## Authors
+
+- [&Lstrok;ukasz Kurpiewski](https://github.com/ecosse3)
+- [Ronald Record](https://github.com/doctorfree)
