@@ -207,7 +207,87 @@ local normal_mode_mappings = {
     w = { 'watches' },
   },
 
-  D = { name = 'Duck' },
+  D = {
+    name = 'Duck',
+    s = {
+      function()
+        require("duck").hatch("🦆", 1.5)
+      end,
+      "Hatch Slow Duck",
+    },
+    g = {
+      function()
+        require("duck").hatch("ඞ", 4)
+      end,
+      "Hatch Ghost",
+    },
+    h = {
+      function()
+        require("duck").hatch("🐎", 5)
+      end,
+      "Hatch Horse",
+    },
+    t = {
+      function()
+        require("duck").hatch("🦖", 3)
+      end,
+      "Hatch Dinosaur",
+    },
+    a = {
+      function()
+        require("duck").hatch("🦀", 1)
+      end,
+      "Hatch Crab",
+    },
+    i = {
+      function()
+        require("duck").hatch("🐤", 3)
+      end,
+      "Hatch Chick",
+    },
+    c = {
+      function()
+        require("duck").hatch("🐈", 2)
+      end,
+      "Hatch Cat",
+    },
+    d = {
+      function()
+        require("duck").hatch()
+      end,
+      "Hatch Duck",
+    },
+    A = {
+      function()
+        require("duck").hatch()
+        require("duck").hatch("🦀", 1)
+        require("duck").hatch("🐈", 2)
+        require("duck").hatch("🦖", 3)
+        require("duck").hatch("🐤", 3)
+        require("duck").hatch("ඞ", 4)
+        require("duck").hatch("🐎", 5)
+      end,
+      "Hatch All",
+    },
+    k = {
+      function()
+        require("duck").cook()
+      end,
+      "Cook Duck",
+    },
+    K = {
+      function()
+        require("duck").cook()
+        require("duck").cook()
+        require("duck").cook()
+        require("duck").cook()
+        require("duck").cook()
+        require("duck").cook()
+        require("duck").cook()
+      end,
+      "Cook Many Ducks",
+    },
+  },
 
   g = {
     name = 'Git',
