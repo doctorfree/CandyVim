@@ -34,11 +34,11 @@ And of course usage of [telescope](https://github.com/nvim-telescope/telescope.n
 
 Dashboard
 
-![Dashboard](./.screenshots/6-alpha.png)
+![Dashboard](https://raw.githubusercontent.com/wiki/doctorfree/CandyVim/screenshots/6-alpha.png)
 
 Overview
 
-![Neovim](./.screenshots/5-main.png)
+![Neovim](https://raw.githubusercontent.com/wiki/doctorfree/CandyVim/screenshots/5-main.png)
 
 <details>
 <summary>More screenshots</summary>
@@ -47,27 +47,27 @@ Some of screenshots can be old
 
 TailwindCSS with nvim-cmp
 
-![TailwindCSS](./.screenshots/5-tailwind.png)
+![TailwindCSS](https://raw.githubusercontent.com/wiki/doctorfree/CandyVim/screenshots/5-tailwind.png)
 
 Which Key Menu
 
-![WhichKey](./.screenshots/4-which-key.png)
+![WhichKey](https://raw.githubusercontent.com/wiki/doctorfree/CandyVim/screenshots/4-which-key.png)
 
 Lazygit
 
-![Lazygit](./.screenshots/4-lazygit.png)
+![Lazygit](https://raw.githubusercontent.com/wiki/doctorfree/CandyVim/screenshots/4-lazygit.png)
 
 Telescope
 
-![Telescope](./.screenshots/4-telescope.png)
+![Telescope](https://raw.githubusercontent.com/wiki/doctorfree/CandyVim/screenshots/4-telescope.png)
 
 Git Commits w/ Telescope
 
-![Commits](./.screenshots/4-bcommits.png)
+![Commits](https://raw.githubusercontent.com/wiki/doctorfree/CandyVim/screenshots/4-bcommits.png)
 
 Git Side Blame
 
-![Side Blame](./.screenshots/4-side-blame.png)
+![Side Blame](https://raw.githubusercontent.com/wiki/doctorfree/CandyVim/screenshots/4-side-blame.png)
 </details>
 
 ## Installation
