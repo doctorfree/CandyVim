@@ -118,12 +118,12 @@ dashboard.section.buttons.val = {
   -- ╭──────────────────────────────────────────────────────────╮
   -- │ Hatch a pretty fast duck and a mellow cat                │
   -- ╰──────────────────────────────────────────────────────────╯
-  button("h", icons.squirrel .. " " .. "Hatch Duck and Cat", "<cmd>lua require('duck').hatch('🦆', 7) require('duck').hatch('🐈', 2)<CR>", {}),
+  button("h", icons.squirrel .. " " .. "Hatch Duck, Adopt Cat", "<cmd>lua require('duck').hatch('🦆', 7) require('duck').hatch('🐈', 2)<CR>", {}),
+  button("h", icons.squirrel .. " " .. "Cook Duck, Let Cat Out", "<cmd>lua require('duck').cook() require('duck').cook()<CR>", {}),
   button("f", icons.fileNoBg .. " " .. "Find File", "<cmd>lua require('plugins.telescope').project_files()<CR>", {}),
   button("w", icons.word .. " " .. "Find Word", "<cmd>lua require('plugins.telescope.pickers.multi-rg')()<CR>", {}),
   button("r", icons.fileRecent .. " " .. "Recents", "<cmd>Telescope oldfiles hidden=true<CR>", {}),
   button("s", icons.timer .. " " .. "Load Current Dir Session", "<cmd>SessionManager load_current_dir_session<CR>", {}),
-  button("u", icons.packageDown .. " " .. "Update Plugins", "<cmd>Lazy update<CR>", {}),
   button("m", icons.package .. " " .. "Manage Plugins", "<cmd>Lazy<CR>", {}),
   button("c", icons.cog .. " " .. "Settings", "<cmd>e $MYVIMRC<CR>", {}),
   button("q", icons.exit .. " " .. "Exit", "<cmd>exit<CR>", {}),
