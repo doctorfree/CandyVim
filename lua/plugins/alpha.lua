@@ -118,8 +118,8 @@ dashboard.section.buttons.val = {
   -- ╭──────────────────────────────────────────────────────────╮
   -- │ Hatch a pretty fast duck and a mellow cat                │
   -- ╰──────────────────────────────────────────────────────────╯
-  button("h", icons.squirrel .. " " .. "Hatch Duck, Adopt Cat", "<cmd>lua require('duck').hatch('🦆', 7) require('duck').hatch('🐈', 2)<CR>", {}),
-  button("k", icons.squirrel .. " " .. "Cook Duck, Let Cat Out", "<cmd>lua require('duck').cook() require('duck').cook()<CR>", {}),
+  button("a", icons.squirrel .. " " .. "Adopt Cat, Hatch Duck", "<cmd>lua require('duck').hatch('🦆', 7) require('duck').hatch('🐈', 2)<CR>", {}),
+  button("l", icons.squirrel .. " " .. "Let Cat Out, Cook Duck", "<cmd>lua require('duck').cook() require('duck').cook()<CR>", {}),
   button("f", icons.fileNoBg .. " " .. "Find File", "<cmd>lua require('plugins.telescope').project_files()<CR>", {}),
   button("w", icons.word .. " " .. "Find Word", "<cmd>lua require('plugins.telescope.pickers.multi-rg')()<CR>", {}),
   button("r", icons.fileRecent .. " " .. "Recents", "<cmd>Telescope oldfiles hidden=true<CR>", {}),
