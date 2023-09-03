@@ -27,8 +27,8 @@ return {
 
   -- Candy
   {
-    'echasnovski/mini.animate',
-    version = '*',
+    "echasnovski/mini.animate",
+    version = "*",
     config = true,
   },
   -- Alternate Duck configurations:
@@ -41,7 +41,7 @@ return {
   -- Quite a mellow cat
   -- vim.keymap.set('n', '<leader>dc', function() require("duck").hatch("🐈", 0.75) end, {})
   {
-    'tamton-aquib/duck.nvim',
+    "tamton-aquib/duck.nvim",
     -- <leader>d is already taken for debug keymaps
     keys = {
       "<Leader>DA",
@@ -54,12 +54,12 @@ return {
       "<Leader>Dh",
       "<Leader>Dt",
       "<Leader>Dk",
-      "<Leader>DK"
+      "<Leader>DK",
     },
     -- Moved keymaps to plugins/which-key.lua
   },
   {
-    'tamton-aquib/flirt.nvim',
+    "tamton-aquib/flirt.nvim",
     config = function()
       require("plugins.flirt")
     end,
@@ -95,8 +95,8 @@ return {
         "<cmd>lua require('spectre').open_visual()<CR>",
         mode = "v",
         desc = "refactor",
-      }
-    }
+      },
+    },
   },
   {
     "nvim-telescope/telescope.nvim",
@@ -249,9 +249,9 @@ return {
     end,
     cmd = { "Glance" },
     keys = {
-      { "gd", "<cmd>Glance definitions<CR>",      desc = "LSP Definition" },
-      { "gr", "<cmd>Glance references<CR>",       desc = "LSP References" },
-      { "gm", "<cmd>Glance implementations<CR>",  desc = "LSP Implementations" },
+      { "gd", "<cmd>Glance definitions<CR>", desc = "LSP Definition" },
+      { "gr", "<cmd>Glance references<CR>", desc = "LSP References" },
+      { "gm", "<cmd>Glance implementations<CR>", desc = "LSP Implementations" },
       { "gy", "<cmd>Glance type_definitions<CR>", desc = "LSP Type Definitions" },
     },
   },
@@ -264,7 +264,7 @@ return {
     },
     config = function()
       require("lsp-file-operations").setup()
-    end
+    end,
   },
 
   -- General
@@ -295,8 +295,8 @@ return {
     lazy = false,
     keys = {
       { "<leader>ac", "<cmd>lua require('comment-box').lbox()<CR>", desc = "comment box" },
-      { "<leader>ac", "<cmd>lua require('comment-box').lbox()<CR>", mode = "v",          desc = "comment box" },
-    }
+      { "<leader>ac", "<cmd>lua require('comment-box').lbox()<CR>", mode = "v", desc = "comment box" },
+    },
   },
   {
     "akinsho/nvim-toggleterm.lua",
@@ -306,36 +306,36 @@ return {
       require("plugins.toggleterm")
     end,
     keys = {
-      { "<Leader>at", "<cmd>ToggleTerm direction=float<CR>", desc = "terminal float" }
-    }
+      { "<Leader>at", "<cmd>ToggleTerm direction=float<CR>", desc = "terminal float" },
+    },
   },
-  { "tpope/vim-repeat",           lazy = false },
-  { "tpope/vim-speeddating",      lazy = false },
+  { "tpope/vim-repeat", lazy = false },
+  { "tpope/vim-speeddating", lazy = false },
   { "dhruvasagar/vim-table-mode", ft = { "markdown" } },
   {
     "smoka7/multicursors.nvim",
     event = "VeryLazy",
     dependencies = {
-      'nvim-treesitter/nvim-treesitter',
-      'smoka7/hydra.nvim',
+      "nvim-treesitter/nvim-treesitter",
+      "smoka7/hydra.nvim",
     },
     config = true,
     keys = {
       {
-        '<LEADER>m',
-        '<CMD>MCstart<CR>',
-        desc = 'multicursor',
+        "<LEADER>m",
+        "<CMD>MCstart<CR>",
+        desc = "multicursor",
       },
       {
-        '<LEADER>m',
-        '<CMD>MCvisual<CR>',
+        "<LEADER>m",
+        "<CMD>MCvisual<CR>",
         mode = "v",
-        desc = 'multicursor',
+        desc = "multicursor",
       },
       {
-        '<C-Down>',
-        '<CMD>MCunderCursor<CR>',
-        desc = 'multicursor down',
+        "<C-Down>",
+        "<CMD>MCunderCursor<CR>",
+        desc = "multicursor down",
       },
     },
   },
@@ -416,34 +416,34 @@ return {
       require("plugins.bufferline")
     end,
     keys = {
-      { ",1",    "<cmd>BufferLineGoToBuffer 1<CR>",       desc = "Go to buffer 1" },
-      { ",2",    "<cmd>BufferLineGoToBuffer 2<CR>",       desc = "Go to buffer 2" },
-      { ",3",    "<cmd>BufferLineGoToBuffer 3<CR>",       desc = "Go to buffer 3" },
-      { ",4",    "<cmd>BufferLineGoToBuffer 4<CR>",       desc = "Go to buffer 4" },
-      { ",5",    "<cmd>BufferLineGoToBuffer 5<CR>",       desc = "Go to buffer 5" },
-      { ",6",    "<cmd>BufferLineGoToBuffer 6<CR>",       desc = "Go to buffer 6" },
-      { ",7",    "<cmd>BufferLineGoToBuffer 7<CR>",       desc = "Go to buffer 7" },
-      { ",8",    "<cmd>BufferLineGoToBuffer 8<CR>",       desc = "Go to buffer 8" },
-      { ",9",    "<cmd>BufferLineGoToBuffer 9<CR>",       desc = "Go to buffer 9" },
-      { "<A-1>",       "<cmd>BufferLineGoToBuffer 1<CR>", desc = "Go to buffer 1" },
-      { "<A-2>",       "<cmd>BufferLineGoToBuffer 2<CR>", desc = "Go to buffer 2" },
-      { "<A-3>",       "<cmd>BufferLineGoToBuffer 3<CR>", desc = "Go to buffer 3" },
-      { "<A-4>",       "<cmd>BufferLineGoToBuffer 4<CR>", desc = "Go to buffer 4" },
-      { "<A-5>",       "<cmd>BufferLineGoToBuffer 5<CR>", desc = "Go to buffer 5" },
-      { "<A-6>",       "<cmd>BufferLineGoToBuffer 6<CR>", desc = "Go to buffer 6" },
-      { "<A-7>",       "<cmd>BufferLineGoToBuffer 7<CR>", desc = "Go to buffer 7" },
-      { "<A-8>",       "<cmd>BufferLineGoToBuffer 8<CR>", desc = "Go to buffer 8" },
-      { "<A-9>",       "<cmd>BufferLineGoToBuffer 9<CR>", desc = "Go to buffer 9" },
-      { "<Leader>bb",  "<cmd>BufferLineMovePrev<CR>",                desc = "Move back" },
-      { "<Leader>bl",  "<cmd>BufferLineCloseLeft<CR>",               desc = "Close Left" },
-      { "<Leader>br",  "<cmd>BufferLineCloseRight<CR>",              desc = "Close Right" },
-      { "<Leader>bn",  "<cmd>BufferLineMoveNext<CR>",                desc = "Move next" },
-      { "<Leader>bp",  "<cmd>BufferLinePick<CR>",                    desc = "Pick Buffer" },
-      { "<Leader>bP",  "<cmd>BufferLineTogglePin<CR>",               desc = "Pin/Unpin Buffer" },
-      { "<Leader>bsd", "<cmd>BufferLineSortByDirectory<CR>",         desc = "Sort by directory" },
-      { "<Leader>bse", "<cmd>BufferLineSortByExtension<CR>",         desc = "Sort by extension" },
+      { ",1", "<cmd>BufferLineGoToBuffer 1<CR>", desc = "Go to buffer 1" },
+      { ",2", "<cmd>BufferLineGoToBuffer 2<CR>", desc = "Go to buffer 2" },
+      { ",3", "<cmd>BufferLineGoToBuffer 3<CR>", desc = "Go to buffer 3" },
+      { ",4", "<cmd>BufferLineGoToBuffer 4<CR>", desc = "Go to buffer 4" },
+      { ",5", "<cmd>BufferLineGoToBuffer 5<CR>", desc = "Go to buffer 5" },
+      { ",6", "<cmd>BufferLineGoToBuffer 6<CR>", desc = "Go to buffer 6" },
+      { ",7", "<cmd>BufferLineGoToBuffer 7<CR>", desc = "Go to buffer 7" },
+      { ",8", "<cmd>BufferLineGoToBuffer 8<CR>", desc = "Go to buffer 8" },
+      { ",9", "<cmd>BufferLineGoToBuffer 9<CR>", desc = "Go to buffer 9" },
+      { "<A-1>", "<cmd>BufferLineGoToBuffer 1<CR>", desc = "Go to buffer 1" },
+      { "<A-2>", "<cmd>BufferLineGoToBuffer 2<CR>", desc = "Go to buffer 2" },
+      { "<A-3>", "<cmd>BufferLineGoToBuffer 3<CR>", desc = "Go to buffer 3" },
+      { "<A-4>", "<cmd>BufferLineGoToBuffer 4<CR>", desc = "Go to buffer 4" },
+      { "<A-5>", "<cmd>BufferLineGoToBuffer 5<CR>", desc = "Go to buffer 5" },
+      { "<A-6>", "<cmd>BufferLineGoToBuffer 6<CR>", desc = "Go to buffer 6" },
+      { "<A-7>", "<cmd>BufferLineGoToBuffer 7<CR>", desc = "Go to buffer 7" },
+      { "<A-8>", "<cmd>BufferLineGoToBuffer 8<CR>", desc = "Go to buffer 8" },
+      { "<A-9>", "<cmd>BufferLineGoToBuffer 9<CR>", desc = "Go to buffer 9" },
+      { "<Leader>bb", "<cmd>BufferLineMovePrev<CR>", desc = "Move back" },
+      { "<Leader>bl", "<cmd>BufferLineCloseLeft<CR>", desc = "Close Left" },
+      { "<Leader>br", "<cmd>BufferLineCloseRight<CR>", desc = "Close Right" },
+      { "<Leader>bn", "<cmd>BufferLineMoveNext<CR>", desc = "Move next" },
+      { "<Leader>bp", "<cmd>BufferLinePick<CR>", desc = "Pick Buffer" },
+      { "<Leader>bP", "<cmd>BufferLineTogglePin<CR>", desc = "Pin/Unpin Buffer" },
+      { "<Leader>bsd", "<cmd>BufferLineSortByDirectory<CR>", desc = "Sort by directory" },
+      { "<Leader>bse", "<cmd>BufferLineSortByExtension<CR>", desc = "Sort by extension" },
       { "<Leader>bsr", "<cmd>BufferLineSortByRelativeDirectory<CR>", desc = "Sort by relative dir" },
-    }
+    },
   },
   { "antoinemadec/FixCursorHold.nvim" }, -- Needed while issue https://github.com/neovim/neovim/issues/12587 is still open
   {
@@ -476,11 +476,37 @@ return {
       require("plugins.package-info")
     end,
   },
+  -- {
+  --   "iamcco/markdown-preview.nvim",
+  --   ft = "markdown",
+  --   build = function()
+  --     local appdir = vim.fn.stdpath("data") .. "/lazy/markdown-preview.nvim/app"
+  --     "cd app && npm install"),
+  --   end,
+  --   init = function()
+  --     vim.g.mkdp_filetypes = { "markdown" }
+  --   end,
+  -- },
   {
     "iamcco/markdown-preview.nvim",
-    build = "cd app && npm install",
-    setup = function()
-      vim.g.mkdp_filetypes = { "markdown" }
+    build = "cd app && npm install && git reset --hard",
+    cmd = { "MarkdownPreview", "MarkdownPreviewStop", "MarkdownPreviewToggle" },
+    event = "VeryLazy",
+    config = function()
+      require("plugins.markdown-preview")
+      local wk = require("which-key")
+      wk.register({
+        m = {
+          name = "Markdown",
+          p = { ":MarkdownPreview<CR>", "Start Preview" },
+          s = { ":MarkdownPreviewStop<CR>", "Stop Preview" },
+          t = { ":MarkdownPreviewToggle<CR>", "Toggle Preview" },
+        },
+      }, {
+        prefix = "<leader>",
+        mode = "n",
+        { silent = true },
+      })
     end,
     ft = { "markdown" },
   },
@@ -500,12 +526,12 @@ return {
       require("plugins.session-manager")
     end,
     keys = {
-      { "<Leader>/sc", "<cmd>SessionManager load_session<CR>",             desc = "choose session" },
-      { "<Leader>/sr", "<cmd>SessionManager delete_session<CR>",           desc = "remove session" },
+      { "<Leader>/sc", "<cmd>SessionManager load_session<CR>", desc = "choose session" },
+      { "<Leader>/sr", "<cmd>SessionManager delete_session<CR>", desc = "remove session" },
       { "<Leader>/sd", "<cmd>SessionManager load_current_dir_session<CR>", desc = "load current dir session" },
-      { "<Leader>/sl", "<cmd>SessionManager load_last_session<CR>",        desc = "load last session" },
-      { "<Leader>/ss", "<cmd>SessionManager save_current_session<CR>",     desc = "save session" },
-    }
+      { "<Leader>/sl", "<cmd>SessionManager load_last_session<CR>", desc = "load last session" },
+      { "<Leader>/ss", "<cmd>SessionManager save_current_session<CR>", desc = "save session" },
+    },
   },
   {
     "kylechui/nvim-surround",
@@ -583,12 +609,7 @@ return {
       vim.keymap.set({ "n", "o", "x" }, "w", "<cmd>lua require('spider').motion('w')<CR>", { desc = "Spider-w" })
       vim.keymap.set({ "n", "o", "x" }, "e", "<cmd>lua require('spider').motion('e')<CR>", { desc = "Spider-e" })
       vim.keymap.set({ "n", "o", "x" }, "b", "<cmd>lua require('spider').motion('b')<CR>", { desc = "Spider-b" })
-      vim.keymap.set(
-        { "n", "o", "x" },
-        "ge",
-        "<cmd>lua require('spider').motion('ge')<CR>",
-        { desc = "Spider-ge" }
-      )
+      vim.keymap.set({ "n", "o", "x" }, "ge", "<cmd>lua require('spider').motion('ge')<CR>", { desc = "Spider-ge" })
     end,
   },
 
@@ -682,7 +703,7 @@ return {
       { "<Leader>ghS", desc = "stage buffer" },
       { "<Leader>ght", desc = "toggle deleted" },
       { "<Leader>ghu", desc = "undo stage" },
-    }
+    },
   },
   {
     "sindrets/diffview.nvim",
@@ -694,7 +715,7 @@ return {
     end,
     keys = {
       { "<Leader>gd", "<cmd>lua require('plugins.git.diffview').toggle_file_history()<CR>", desc = "diff file" },
-      { "<Leader>gs", "<cmd>lua require('plugins.git.diffview').toggle_status()<CR>",       desc = "status" }
+      { "<Leader>gs", "<cmd>lua require('plugins.git.diffview').toggle_status()<CR>", desc = "status" },
     },
   },
   {
@@ -704,12 +725,12 @@ return {
       require("plugins.git.conflict")
     end,
     keys = {
-      { "<Leader>gcb", '<cmd>GitConflictChooseBoth<CR>',   desc = 'choose both' },
-      { "<Leader>gcn", '<cmd>GitConflictNextConflict<CR>', desc = 'move to next conflict' },
-      { "<Leader>gco", '<cmd>GitConflictChooseOurs<CR>',   desc = 'choose ours' },
-      { "<Leader>gcp", '<cmd>GitConflictPrevConflict<CR>', desc = 'move to prev conflict' },
-      { "<Leader>gct", '<cmd>GitConflictChooseTheirs<CR>', desc = 'choose theirs' },
-    }
+      { "<Leader>gcb", "<cmd>GitConflictChooseBoth<CR>", desc = "choose both" },
+      { "<Leader>gcn", "<cmd>GitConflictNextConflict<CR>", desc = "move to next conflict" },
+      { "<Leader>gco", "<cmd>GitConflictChooseOurs<CR>", desc = "choose ours" },
+      { "<Leader>gcp", "<cmd>GitConflictPrevConflict<CR>", desc = "move to prev conflict" },
+      { "<Leader>gct", "<cmd>GitConflictChooseTheirs<CR>", desc = "choose theirs" },
+    },
   },
   {
     "ThePrimeagen/git-worktree.nvim",
@@ -719,8 +740,8 @@ return {
     end,
     keys = {
       { "<Leader>gww", desc = "worktrees" },
-      { "<Leader>gwc", desc = "create worktree" }
-    }
+      { "<Leader>gwc", desc = "create worktree" },
+    },
   },
   {
     "kdheepak/lazygit.nvim",
