@@ -1,10 +1,10 @@
-local actions    = require('telescope.actions')
-local previewers = require('telescope.previewers')
-local builtin    = require('telescope.builtin')
-local icons      = CandyVim.icons
+local actions = require("telescope.actions")
+local previewers = require("telescope.previewers")
+local builtin = require("telescope.builtin")
+local icons = CandyVim.icons
 
-require('telescope').load_extension('fzf')
-require('telescope').load_extension('repo')
+require("telescope").load_extension("fzf")
+require("telescope").load_extension("repo")
 require("telescope").load_extension("git_worktree")
 
 local git_icons = {
@@ -17,35 +17,35 @@ local git_icons = {
   untracked = "?",
 }
 
-require('telescope').setup {
+require("telescope").setup({
   defaults = {
-    border            = true,
-    hl_result_eol     = true,
-    multi_icon        = '',
+    border = true,
+    hl_result_eol = true,
+    multi_icon = "",
     vimgrep_arguments = {
-      'rg',
-      '--color=never',
-      '--no-heading',
-      '--with-filename',
-      '--line-number',
-      '--column',
-      '--smart-case'
+      "rg",
+      "--color=never",
+      "--no-heading",
+      "--with-filename",
+      "--line-number",
+      "--column",
+      "--smart-case",
     },
-    layout_config     = {
+    layout_config = {
       horizontal = {
         preview_cutoff = 120,
       },
       prompt_position = "top",
     },
-    file_sorter       = require('telescope.sorters').get_fzy_sorter,
-    prompt_prefix     = '  ',
-    color_devicons    = true,
-    git_icons         = git_icons,
-    sorting_strategy  = "ascending",
-    file_previewer    = require('telescope.previewers').vim_buffer_cat.new,
-    grep_previewer    = require('telescope.previewers').vim_buffer_vimgrep.new,
-    qflist_previewer  = require('telescope.previewers').vim_buffer_qflist.new,
-    mappings          = {
+    file_sorter = require("telescope.sorters").get_fzy_sorter,
+    prompt_prefix = "  ",
+    color_devicons = true,
+    git_icons = git_icons,
+    sorting_strategy = "ascending",
+    file_previewer = require("telescope.previewers").vim_buffer_cat.new,
+    grep_previewer = require("telescope.previewers").vim_buffer_vimgrep.new,
+    qflist_previewer = require("telescope.previewers").vim_buffer_qflist.new,
+    mappings = {
       i = {
         ["<C-x>"] = false,
         ["<C-j>"] = actions.move_selection_next,
@@ -59,34 +59,44 @@ require('telescope').setup {
       n = {
         ["<C-s>"] = actions.cycle_previewers_next,
         ["<C-a>"] = actions.cycle_previewers_prev,
-      }
-    }
+      },
+    },
   },
   extensions = {
     fzf = {
-      override_generic_sorter = false,
+      fuzzy = true,
+      override_generic_sorter = true,
       override_file_sorter = true,
       case_mode = "smart_case",
-    }
-  }
-}
+    },
+  },
+})
 
 -- Implement delta as previewer for diffs
 
 local M = {}
 
-local delta_bcommits = previewers.new_termopen_previewer {
+local delta_bcommits = previewers.new_termopen_previewer({
   get_command = function(entry)
-    return { 'git', '-c', 'core.pager=delta', '-c', 'delta.side-by-side=false', 'diff', entry.value .. '^!', '--',
-      entry.current_file }
-  end
-}
+    return {
+      "git",
+      "-c",
+      "core.pager=delta",
+      "-c",
+      "delta.side-by-side=false",
+      "diff",
+      entry.value .. "^!",
+      "--",
+      entry.current_file,
+    }
+  end,
+})
 
-local delta = previewers.new_termopen_previewer {
+local delta = previewers.new_termopen_previewer({
   get_command = function(entry)
-    return { 'git', '-c', 'core.pager=delta', '-c', 'delta.side-by-side=false', 'diff', entry.value .. '^!' }
-  end
-}
+    return { "git", "-c", "core.pager=delta", "-c", "delta.side-by-side=false", "diff", entry.value .. "^!" }
+  end,
+})
 
 M.my_git_commits = function(opts)
   opts = opts or {}
@@ -113,46 +123,46 @@ end
 -- Custom pickers
 
 M.edit_neovim = function()
-  builtin.git_files(
-    require('telescope.themes').get_dropdown({
-      color_devicons   = true,
-      cwd              = "~/.config/nvim-CandyVim",
-      previewer        = false,
-      prompt_title     = "Candyvim Dotfiles",
-      sorting_strategy = "ascending",
-      winblend         = 4,
-      layout_config    = {
-        horizontal = {
-          mirror = false,
-        },
-        vertical = {
-          mirror = false,
-        },
-        prompt_position = "top",
+  builtin.git_files(require("telescope.themes").get_dropdown({
+    color_devicons = true,
+    cwd = "~/.config/nvim-CandyVim",
+    previewer = false,
+    prompt_title = "Candyvim Dotfiles",
+    sorting_strategy = "ascending",
+    winblend = 4,
+    layout_config = {
+      horizontal = {
+        mirror = false,
       },
-    }))
+      vertical = {
+        mirror = false,
+      },
+      prompt_position = "top",
+    },
+  }))
 end
 
 M.project_files = function(opts)
   opts = opts or {} -- define here if you want to define something
-  local ok = pcall(require "telescope.builtin".git_files, opts)
-  if not ok then require "telescope.builtin".find_files(opts) end
+  local ok = pcall(require("telescope.builtin").git_files, opts)
+  if not ok then
+    require("telescope.builtin").find_files(opts)
+  end
 end
 
 M.command_history = function()
-  builtin.command_history(
-    require('telescope.themes').get_dropdown({
-      color_devicons = true,
-      winblend       = 4,
-      layout_config  = {
-        width = function(_, max_columns, _)
-          return math.min(max_columns, 150)
-        end,
-        height = function(_, _, max_lines)
-          return math.min(max_lines, 15)
-        end,
-      },
-    }))
+  builtin.command_history(require("telescope.themes").get_dropdown({
+    color_devicons = true,
+    winblend = 4,
+    layout_config = {
+      width = function(_, max_columns, _)
+        return math.min(max_columns, 150)
+      end,
+      height = function(_, _, max_lines)
+        return math.min(max_lines, 15)
+      end,
+    },
+  }))
 end
 
 return M
