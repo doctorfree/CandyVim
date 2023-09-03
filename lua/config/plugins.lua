@@ -476,17 +476,6 @@ return {
       require("plugins.package-info")
     end,
   },
-  -- {
-  --   "iamcco/markdown-preview.nvim",
-  --   ft = "markdown",
-  --   build = function()
-  --     local appdir = vim.fn.stdpath("data") .. "/lazy/markdown-preview.nvim/app"
-  --     "cd app && npm install"),
-  --   end,
-  --   init = function()
-  --     vim.g.mkdp_filetypes = { "markdown" }
-  --   end,
-  -- },
   {
     "iamcco/markdown-preview.nvim",
     build = "cd app && npm install && git reset --hard",
