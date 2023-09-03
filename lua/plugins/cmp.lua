@@ -102,7 +102,7 @@ local source_mapping = {
   cmp_tabnine = CandyVim.icons.light,
   Copilot = CandyVim.icons.copilot,
   Codeium = CandyVim.icons.codeium,
-  nvim_lsp = CandyVim.icons.paragraph .. "LSP",
+  nvim_lsp = CandyVim.icons.stack .. "LSP",
   buffer = CandyVim.icons.buffer .. "BUF",
   nvim_lua = CandyVim.icons.bomb,
   luasnip = CandyVim.icons.snippet .. "SNP",
@@ -294,6 +294,7 @@ cmp.setup({
       name = "buffer",
       priority = 7,
       keyword_length = 5,
+      max_item_count = 10,
       option = buffer_option,
     },
     { name = "nvim_lua",    priority = 5 },
@@ -301,11 +302,12 @@ cmp.setup({
     { name = "calc",        priority = 3 },
   },
   sorting = {
+    priority_weight = 2,
     comparators = {
       deprioritize_snippet,
+      copilot_cmp_comparators.prioritize or function() end,
       cmp.config.compare.exact,
       cmp.config.compare.locality,
-      copilot_cmp_comparators.prioritize or function() end,
       cmp.config.compare.score,
       cmp.config.compare.recently_used,
       cmp.config.compare.offset,
@@ -328,6 +330,9 @@ cmp.setup({
   experimental = {
     ghost_text = true,
   },
+  performance = {
+    max_view_entries = 100,
+  }
 })
 
 -- ╭──────────────────────────────────────────────────────────╮
