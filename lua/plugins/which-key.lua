@@ -291,6 +291,7 @@ local normal_mode_mappings = {
 
   G = {
     name = 'Games',
+    a = { "<cmd>:HackAuto<CR>",                         "Hack auto typing mode" },
     b = { "<cmd>BlackJackNewGame<CR>",                  "Blackjack" },
     h = { "<cmd>:Hack<CR>",                             "Hack" },
     f = { "<cmd>:HackFollow<CR>",                       "Hack current buffer" },
