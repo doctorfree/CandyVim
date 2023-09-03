@@ -2,6 +2,22 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.0.1](https://github.com/doctorfree/CandyVim/compare/v4.0.0...v4.0.1) (2023-08-02)
+
+### Features
+
+* **plugins:** Rework `markdown-preview` spec and configuration
+* **plugins:** Modify telescope fzf extension configuration
+* **plugins:** Add Authors section
+* **plugins:** Use screenshots from Wiki
+* **plugins:** Add Games to plugins, add Hack to dashboard, add Games to which-key
+
+### Bug Fixes
+
+* **plugins:** Fix `nvim-tree` dependency declaration, use new name
+* **plugins:** Fix bug in plugin spec using `requires` rather than `dependencies`
+* **plugins:** Find `python3` and `ruby` and set globals
+
 ## [4.0.0](https://github.com/doctorfree/CandyVim/compare/v3.7.0...v4.0.0) (2023-08-02)
 
 Forked Ecovim and adapted for use with eye candy for fun
